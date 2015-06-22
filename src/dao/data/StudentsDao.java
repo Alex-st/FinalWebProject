@@ -3,13 +3,14 @@ package dao.data;
 import dao.models.Student;
 import dao.pool.MyDBPool;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -18,7 +19,7 @@ public class StudentsDao {
     private List<Student> studentsList;
     private MyDBPool pool;
     private String propFileName = "resources/myconfig.properties";
-    final static String find = "SELECT COUNT(*) FROM students WHERE login = ? AND password = ?";
+    final static String find = "SELECT COUNT(*) FROM students WHERE studLogin = ? AND studPassword = ?";
     final static String findByLogin = "SELECT studName, studSurname FROM students WHERE studLogin = ?";
 
     public StudentsDao() {
@@ -32,8 +33,9 @@ public class StudentsDao {
                     .getResourceAsStream(propFileName);
             prop.load(in);
             //prop.load(new FileInputStream(propFileName));
-        } catch (IOException e) {
+        } catch (IOException ex) {
             System.out.println("config file not found");
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         // get the property value and use it for dbpool
@@ -47,7 +49,6 @@ public class StudentsDao {
     public void insertStudentsToDB(Student... students) {
 
         Connection conn = pool.getConnection();
-        System.out.println((conn == null)+"insert");
 
         try {
         PreparedStatement statement=
@@ -65,10 +66,10 @@ public class StudentsDao {
         }
         int [] updateCounts = statement.executeBatch();
 
-    } catch (BatchUpdateException e) {
-        e.printStackTrace();}
+    } catch (BatchUpdateException ex) {
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);}
         catch (SQLException ee) {
-            ee.printStackTrace();
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ee);
         }
 
         pool.releaseConnection(conn);
@@ -103,8 +104,8 @@ public class StudentsDao {
 
             if (rs.getInt(1) > 0 )
                 return true;
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -124,11 +125,11 @@ public class StudentsDao {
 
             while (rs.next()) {
 
-                tmp = rs.getString(1)+rs.getString(2);
+                tmp = rs.getString(1)+" "+rs.getString(2);
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -166,17 +167,14 @@ public class StudentsDao {
 
     public static void main(String[] args) {
         StudentsDao test = new StudentsDao();
-        Student testStudent = new Student(2, "1", "1", "1", "1", "1");
-        try {
-            test.removeStudentFromDB(testStudent);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        Student testStudent = new Student(2, "максим", "перепилица", "perepel", "test", "mail");
+        test.insertStudentsToDB(testStudent);
+
 
         try {
             test.studentsList = test.getAllStudentsFromDB();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(test.studentsList.size());
         for(Student i: test.studentsList) {

@@ -19,12 +19,23 @@ public class RegistrationCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 
-        String name = request.getParameter("name");
-        String surname = request.getParameter("surname");
-        String login = request.getParameter("login");
-        String password = request.getParameter("password");
-        String email = request.getParameter("email");
-        String whoIs = request.getParameter("select");
+        request.setCharacterEncoding("UTF-8");
+
+        String name = new String (request.getParameter("name").getBytes ("iso-8859-1"), "UTF-8");
+        String surname = new String (request.getParameter("surname").getBytes ("iso-8859-1"), "UTF-8");
+        String login = new String (request.getParameter("login").getBytes ("iso-8859-1"), "UTF-8");
+        String password = new String (request.getParameter("password").getBytes ("iso-8859-1"), "UTF-8");
+        String email = new String (request.getParameter("email").getBytes ("iso-8859-1"), "UTF-8");
+        String whoIs = new String (request.getParameter("select").getBytes ("iso-8859-1"), "UTF-8");
+
+        //String name = request.getParameter("name");
+//        System.out.println(name);
+//
+//        String surname = request.getParameter("surname");
+//        String login = request.getParameter("login");
+//        String password = request.getParameter("password");
+//        String email = request.getParameter("email");
+//        String whoIs = request.getParameter("select");
 
         switch (whoIs) {
             case "student" :

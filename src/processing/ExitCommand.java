@@ -12,8 +12,10 @@ import java.sql.SQLException;
 /**
  * Created by alex on 6/18/15.
  */
-public class ExitCommand implements Command {
+public class ExitCommand implements ProcessingCommand {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+
+        request.getSession().invalidate();
 
         RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 

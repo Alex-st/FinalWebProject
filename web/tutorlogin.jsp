@@ -7,19 +7,30 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<fmt:setLocale value="${locale}"/>
+<fmt:requestEncoding value="UTF-8" />
+<fmt:setBundle basename="resources.text" />
+
+
+
 <html>
 <head>
-    <title>Tutor's admin page</title>
+    <title><fmt:message key="tutorTitle"/></title>
 </head>
 <body>
-Hello Dear "${user}"
+<center>
+  <fmt:message key="hello"/> "${user}"
+
+  ${requestScope.result}
 
 <c:if test="${not empty questions}" >
-  <p>Список Ваших вопросов</p>>
+  <p><fmt:message key="listOfQuestion"/></p>
   <table>
     <tr>
-      <th>Предмет</th>
-      <th>Вопрос</th>
+      <th><fmt:message key="subject"/></th>
+      <th><fmt:message key="question"/></th>
     </tr>
     <c:forEach var="entry" items="${questions}">
       <tr>
@@ -31,10 +42,15 @@ Hello Dear "${user}"
 </c:if>
 <br><br>
 
-<form method="post" action="newquestion.jsp" >
-    <button type="submit" name="button" value="newquestion" >Создать новый вопрос
-    </button><br>
-</form>
+    <c:import url="/menues/tutormenu.jsp"></c:import>
+
 </center>
+<%--<select name="qtopic">
+  <c:forEach var="topic" items="${topics}">
+    <option value="${topic.topicName}" name="opt">${topic.topicName}</option>
+  </c:forEach>
+</select><br>
+<%= request.getAttribute("rtopics") %>
+<%= request.getParameter("rtopics") %>--%>
 </body>
 </html>

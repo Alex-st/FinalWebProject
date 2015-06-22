@@ -3,14 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-<servlet>
-    <servlet-name>IndexServlet</servlet-name>
-    <servlet-class>myservlets.IndexServlet</servlet-class>
-</servlet>
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>myservlets.IndexServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/authorization</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TutorPageServlet</servlet-name>
+        <servlet-class>myservlets.TutorLoginPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TutorPageServlet</servlet-name>
+        <url-pattern>/tutorpage</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

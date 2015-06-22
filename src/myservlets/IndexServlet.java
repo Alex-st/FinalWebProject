@@ -24,16 +24,16 @@ public class IndexServlet extends HttpServlet {
 
 
     public void init(ServletConfig servletConfig) throws ServletException {
-        super.init(servletConfig);
-        String path = servletConfig.getServletContext().getRealPath("/WEB-INF");
-        System.out.println(path);
-
-        System.out.println("Working Directory = " +
-                System.getProperty("user.dir"));
-
-        Path currentRelativePath = Paths.get("");
-        String s = currentRelativePath.toAbsolutePath().toString();
-        System.out.println("relative path is:"+s);
+//        super.init(servletConfig);
+//        String path = servletConfig.getServletContext().getRealPath("/WEB-INF");
+//        System.out.println(path);
+//
+//        System.out.println("Working Directory = " +
+//                System.getProperty("user.dir"));
+//
+//        Path currentRelativePath = Paths.get("");
+//        String s = currentRelativePath.toAbsolutePath().toString();
+//        System.out.println("relative path is:"+s);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,8 +52,16 @@ public class IndexServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String value = request.getParameter("button");
-        System.out.println("doPost"+value);
+        String value = request.getParameter("send");
+
+        Command c = CommandFactory.getCommand(request);
+
+        //System.out.println(c.toString());
+        try {
+            c.execute(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(IndexServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 

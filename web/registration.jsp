@@ -8,10 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Registration page</title>
 </head>
 <body>
 <center>
+
+  <c:out value="${param.locale}" />
+
 <form action='authorization' method="post">
   <select name="select">
     <option value="student" name="opt">Зарегистрироваться как студент</option>

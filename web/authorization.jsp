@@ -6,24 +6,34 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<c:set var="locale" value="${param.locale}" scope="session"  />
+
+<fmt:setLocale value="${locale}"/>
+<fmt:requestEncoding value="UTF-8" />
+<fmt:setBundle basename="resources.text" />
+
 <html>
 <head>
-  <c:if test="${params['button']=='Student'}" ><title>Страница авторизации для студента</title></c:if>
-  <c:if test="${params['button']=='Tutor'}" ><title>Страница авторизации для администратора</title></c:if>
+  <c:if test="${param.button=='Student'}" ><title><fmt:message key="authStudentPage"/></title></c:if>
+  <c:if test="${param.button=='Tutor'}" ><title><fmt:message key="authTutorPage"/></title></c:if>
 
 </head>
 <body>
-<c:out value="${param.button}" />
-<%= request.getParameter("button") %>
-
-<c:if test="${params['button']=='Tutor'}" >Страница авторизации для администратора</c:if>
-<c:if test="${params['button']=='Student'}" >Страница авторизации для студента</c:if>
+<br>
+<br>
+<center>
+  <c:if test="${param.button=='Student'}" ><title><fmt:message key="authStudentPage"/></title></c:if>
+  <c:if test="${param.button=='Tutor'}" ><title><fmt:message key="authTutorPage"/></title></c:if>
 
 <form action='authorization' method="post">
-  <input type='text' name='login' /><br>
-  <input type='text' name='password' /><br>
-  <input type='submit' name='send' value='signAs<%= request.getParameter("button") %>' /><br>
+  <fmt:message key="loginButton"/><input type='text' name='login' /><br>
+  <fmt:message key="passButton"/><input type='password' name='password' /><br>
+  <button type='submit' name='send' value='signAs<%= request.getParameter("button") %>'><fmt:message key="authButton"/></button><br>
 
 </form>
+</center>
 </body>
 </html>

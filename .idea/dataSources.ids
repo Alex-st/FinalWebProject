@@ -25,7 +25,7 @@
       <index name="fk_questions_tutors1_idx" unique="false" columns="qTutorId"/>
     </table>
     <table name="results" schema="" catalog="mystudydb" type="TABLE">
-      <column name="idEntity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idEntity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="StudId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="TopicId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="Mark" sqlType="DECIMAL" precision="2" scale="0" nullable="true" jdbcType="3"/>
@@ -55,7 +55,7 @@
       <exported-key name="fk_results_topics1" table="results" schema="" catalog="mystudydb" columns="TopicId"/>
     </table>
     <table name="tutors" schema="" catalog="mystudydb" type="TABLE">
-      <column name="idtutors" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idtutors" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="tName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
       <column name="tSurname" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="tLogin" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>

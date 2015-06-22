@@ -21,9 +21,14 @@ import java.util.logging.Logger;
 public class ResultsDao {
     private MyDBPool pool;
     private String propFileName = "resources/myconfig.properties";
+
     private static final String findResulByLogin =
             "SELECT topics.topicName, results.Mark FROM results INNER JOIN topics ON topics.idtopics = results.TopicId" +
                     " WHERE StudId = (SELECT idStudents FROM students WHERE studLogin = ?)";
+
+    private static final String addResult = "INSERT INTO results (StudId, TopicId, Mark) VALUES" +
+            "((SELECT idstudents FROM students WHERE studLogin = ?), (SELECT idtopics FROM topics WHERE topicName=?), ?)";
+
     public ResultsDao() {
         Properties prop = new Properties();
 
@@ -36,6 +41,7 @@ public class ResultsDao {
         } catch (IOException ex) {
             System.out.println("config file not found");
             Logger.getLogger(ResultsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ResultsDao.class.getName()).info("config file not found");
         }
 
         // get the property value and use it for dbpool
@@ -70,8 +76,28 @@ public class ResultsDao {
         return tmp;
     }
 
+    public void addResultToDb(String login, String topic, int res) {
+        Connection conn = pool.getConnection();
+
+        try {
+            PreparedStatement st = conn.prepareStatement(addResult);
+            st.setString(1, login);
+            st.setString(2, topic);
+            st.setFloat(3, res);
+
+            st.executeUpdate();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ResultsDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            pool.releaseConnection(conn);
+        }
+    }
+
     public static void main(String[] args) {
         ResultsDao test = new ResultsDao();
+
+        test.addResultToDb("james", "Алгебра", 3);
 
         Map<String, Integer> map = new HashMap<>();
         map = test.getStudentResultByLogin("james");

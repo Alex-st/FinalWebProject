@@ -2,13 +2,15 @@ package dao.data;
 
 import dao.models.Question;
 import dao.pool.MyDBPool;
+import myservlets.IndexServlet;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -16,7 +18,11 @@ import java.util.Properties;
 public class QuestionsDao {
     private List<Question> tutorsList;
     private MyDBPool pool;
-    private String propFileName = "src/myconfig.properties";
+    private String propFileName = "resources/myconfig.properties";
+    private int numberOfQuestionsInTest;
+    private static final String findByLogin = "SELECT questions.qText, topics.topicName" +
+            " FROM questions INNER JOIN topics ON topics.idtopics = questions.qTopicId WHERE qTutorId =" +
+            "(SELECT idtutors FROM tutors WHERE tLogin = ?)";
 
     public QuestionsDao() {
 
@@ -24,9 +30,13 @@ public class QuestionsDao {
         Properties prop = new Properties();
 
         try {
-            prop.load(new FileInputStream(propFileName));
-        } catch (IOException e) {
+            InputStream in = this.getClass()
+                    .getClassLoader()
+                    .getResourceAsStream(propFileName);
+            prop.load(in);
+        } catch (IOException ex) {
             System.out.println("config file not found");
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         // get the property value and use it for dbpool
@@ -35,6 +45,8 @@ public class QuestionsDao {
         String dbpass = prop.getProperty("dbpass");
 
         pool = new MyDBPool(db, dbuser, dbpass);
+
+        numberOfQuestionsInTest = Integer.valueOf(prop.getProperty("numberOfQuestionsInTest"));
     }
 
     public void insertQuestionsToDB(Question... questions) throws SQLException {
@@ -43,24 +55,27 @@ public class QuestionsDao {
         try {
             PreparedStatement statement=
                     conn.prepareStatement(
-                            "INSERT INTO questions VALUES (?,?,?,?,?,?,?,?,?,?)");
+                            "INSERT INTO questions (qText, qTopicId, qCorrectAnswer, qAnswer2, qAnswer3, qAnswer4, qAnswer5, qTutorId, qLanguage) " +
+                                    "VALUES (?,?,?,?,?,?,?,?,?)");
             for (Question i: questions) {
-                statement.setInt(1, i.getIdQ());
-                statement.setString(2, i.getqText());
-                statement.setInt(3, i.getqTopic());
-                statement.setString(4, i.getqCorrectAnswer());
-                statement.setString(5, i.getqAnswer2());
-                statement.setString(6, i.getqAnswer3());
-                statement.setString(7, i.getqAnswer4());
-                statement.setString(8, i.getqAnswer5());
-                statement.setInt(9, i.getqTutorId());
-                statement.setString(10, i.getqLanguage());
+               // statement.setInt(1, i.getIdQ());
+                statement.setString(1, i.getqText());
+                statement.setInt(2, i.getqTopic());
+                statement.setString(3, i.getqCorrectAnswer());
+                statement.setString(4, i.getqAnswer2());
+                statement.setString(5, i.getqAnswer3());
+                statement.setString(6, i.getqAnswer4());
+                statement.setString(7, i.getqAnswer5());
+                statement.setInt(8, i.getqTutorId());
+
+                statement.setString(9, i.getqLanguage());
+            //    statement.setString(9, i.getqLanguage());
                 statement.addBatch();
             }
             int [] updateCounts = statement.executeBatch();
 
-        } catch (BatchUpdateException e) {
-            e.printStackTrace();}
+        } catch (BatchUpdateException ex) {
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);}
 
         pool.releaseConnection(conn);
 
@@ -77,7 +92,68 @@ public class QuestionsDao {
         statement.executeUpdate();
 
         pool.releaseConnection(conn);
+    }
 
+    public Map<String, String> getAllTutorQuestions(String login) {
+        Map<String, String> questions = new HashMap<>();
+        Connection conn = pool.getConnection();
+
+        try {
+            PreparedStatement st = conn.prepareStatement(findByLogin);
+            st.setString(1, login);
+
+            ResultSet rs = st.executeQuery();
+            // rs.next(); //at the begining iterator placed before first element
+
+            while (rs.next()) {
+
+                questions.put(rs.getString(1), rs.getString(2));
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            pool.releaseConnection(conn);
+        }
+
+        return questions;
+    }
+
+    // returns list with size equals to number of questions in test
+    public List<Question> getQuestionsByTopic(String topic) throws SQLException {
+        List<Question> tmp = new ArrayList<>();
+
+        Connection conn = pool.getConnection();
+
+        PreparedStatement st = conn.prepareStatement("SELECT * FROM questions WHERE qTopicId =" +
+                " (SELECT idtopics FROM topics WHERE topicName=?)");
+        st.setString(1, topic);
+
+        ResultSet rs = st.executeQuery();
+
+        while (rs.next()) {
+            Question currQuestion = new Question();
+            currQuestion.setIdQ(rs.getInt(1));
+            currQuestion.setqText(rs.getString(2));
+            currQuestion.setqTopic(rs.getInt(3));
+            currQuestion.setqCorrectAnswer(rs.getString(4));
+            currQuestion.setqAnswer2(rs.getString(5));
+            currQuestion.setqAnswer3(rs.getString(6));
+            currQuestion.setqAnswer4(rs.getString(7));
+            currQuestion.setqAnswer5(rs.getString(8));
+            currQuestion.setqTutorId(rs.getInt(9));
+            currQuestion.setqLanguage(rs.getString(10));
+
+            tmp.add(currQuestion);
+        }
+
+        while (tmp.size() > numberOfQuestionsInTest) {
+            int i = (int)(Math.random()*tmp.size());
+            tmp.remove(i);
+        }
+
+        pool.releaseConnection(conn);
+        return tmp;
     }
 
     public List<Question> getAllQuestionsFromDB() throws SQLException{
@@ -109,7 +185,29 @@ public class QuestionsDao {
         }
 
         pool.releaseConnection(conn);
+
         return tmp;
     }
 
+    public static void main(String[] args) {
+        QuestionsDao qd = new QuestionsDao();
+        Question q = new Question();
+
+        q.setqText("Тестовый вопрос");
+        q.setqCorrectAnswer("Бывает как обычно");
+        q.setqAnswer2("mi-mi-mi");
+        q.setqAnswer3("нет ничего");
+        q.setqAnswer4("Show must go on");
+        q.setqAnswer5(null);
+        q.setqLanguage("ru");
+        q.setqTutorId(1);
+        q.setqTopic(2);
+
+        try {
+            qd.insertQuestionsToDB(q);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

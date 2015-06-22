@@ -3,13 +3,14 @@ package dao.data;
 import dao.models.Tutor;
 import dao.pool.MyDBPool;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -18,8 +19,9 @@ public class TutorsDao {
     private List<Tutor> tutorsList;
     private MyDBPool pool;
     private String propFileName = "resources/myconfig.properties";
-    final static String find = "SELECT COUNT(*) FROM tutors WHERE login = ? AND password = ?";
+    final static String find = "SELECT COUNT(*) FROM tutors WHERE tLogin = ? AND tPassword = ?";
     final static String findByLogin = "SELECT tName, tSurname FROM tutors WHERE tLogin = ?";
+    final static String findIdByLogin = "SELECT idtutors FROM tutors WHERE tLogin = ?";
 
     public TutorsDao() {
 
@@ -31,6 +33,8 @@ public class TutorsDao {
             prop.load(in);
             //prop.load(new FileInputStream(propFileName));
         } catch (IOException e) {
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(TutorsDao.class.getName()).info("config file not found");
             System.out.println("config file not found");
         }
 
@@ -48,7 +52,7 @@ public class TutorsDao {
         try {
             PreparedStatement statement=
                     conn.prepareStatement(
-                            "INSERT INTO tutors VALUES (?,?,?,?,?)");
+                            "INSERT INTO tutors (tName, tSurname, tLogin, tPassword, email) VALUES (?,?,?,?,?)");
             for (Tutor i: tutors) {
               //  statement.setInt(1, i.getIdtutors());
                 statement.setString(1, i.gettName());
@@ -61,7 +65,7 @@ public class TutorsDao {
             int [] updateCounts = statement.executeBatch();
 
         } catch (BatchUpdateException e) {
-            e.printStackTrace();}
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);}
 
         pool.releaseConnection(conn);
 
@@ -96,12 +100,36 @@ public class TutorsDao {
             if (rs.getInt(1) > 0 )
                 return true;
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             pool.releaseConnection(conn);
         }
 
         return false;
+    }
+
+    public int getIdByLogin(String login) {
+        Connection conn = pool.getConnection();
+        int tmp=0;
+
+        try {
+            PreparedStatement st = conn.prepareStatement(findIdByLogin);
+            st.setString(1, login);
+
+            ResultSet rs = st.executeQuery();
+            // rs.next(); //at the begining iterator placed before first element
+
+            while (rs.next()) {
+
+                tmp = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            pool.releaseConnection(conn);
+        }
+        return tmp;
     }
 
     public String findTutorByLogin(Tutor tutor) {
@@ -117,11 +145,11 @@ public class TutorsDao {
 
             while (rs.next()) {
 
-                tmp = rs.getString(1)+rs.getString(2);
+                tmp = rs.getString(1)+" "+rs.getString(2);
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
         } finally {
             pool.releaseConnection(conn);
         }

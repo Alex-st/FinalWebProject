@@ -5,12 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by alex on 6/8/15.
  */
 public class MyDBPool {
     Map<Connection, Boolean> dbpool;
+ //   Connection connWithEncoding;
     String dbName;
     String user;
     String pass;
@@ -30,27 +33,30 @@ public class MyDBPool {
 
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             Connection conn =
-                    DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName, user, pass);
+                    DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName+"?characterEncoding=UTF-8", user, pass);
 
 //            System.out.println("jdbc:mysql://127.0.0.1:3306/"+dbName);
 //            System.out.println(conn == null);
             dbpool.put(conn, true);
 
+//            connWithEncoding =
+//                    DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName+"?characterEncoding=UTF-8", user, pass);
+
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
         }
 
     }
 
     public synchronized Connection addNewConnection() throws SQLException{
         Connection conn =
-                DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName, user, pass);
+                DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName+"?characterEncoding=UTF-8", user, pass);
 
         dbpool.put(conn, true);
         return conn;
@@ -63,9 +69,14 @@ public class MyDBPool {
             try {
                 i.getKey().close();
             } catch (SQLException e) {
-                e.printStackTrace();
+                Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
             }
         }
+//        try {
+//            connWithEncoding.close();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public int numberOfConnections() {
@@ -93,7 +104,7 @@ public class MyDBPool {
             try {
                 temp = addNewConnection();
             } catch (SQLException e) {
-                e.printStackTrace();
+                Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
             }
         else {
             dbpool.remove(temp);
@@ -101,6 +112,10 @@ public class MyDBPool {
         }
         return temp;
     }
+
+//    public Connection getConnWithEncoding() {
+//        return connWithEncoding;
+//    }
 
     public synchronized void releaseConnection(Connection con) {
         dbpool.remove(con);

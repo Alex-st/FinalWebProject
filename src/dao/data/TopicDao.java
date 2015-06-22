@@ -5,10 +5,14 @@ import dao.pool.MyDBPool;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -16,14 +20,18 @@ import java.util.Properties;
 public class TopicDao {
     private List<Topic> topicsList;
     private MyDBPool pool;
-    private String propFileName = "src/myconfig.properties";
+    private String propFileName = "resources/myconfig.properties";
+    private static final String byName = "SELECT idtopics FROM topics WHERE topicName=?";
 
     public TopicDao() {
         topicsList = new ArrayList<>();
         Properties prop = new Properties();
 
         try {
-            prop.load(new FileInputStream(propFileName));
+            InputStream in = this.getClass()
+                    .getClassLoader()
+                    .getResourceAsStream(propFileName);
+            prop.load(in);
         } catch (IOException e) {
             System.out.println("config file not found");
         }
@@ -34,6 +42,26 @@ public class TopicDao {
         String dbpass = prop.getProperty("dbpass");
 
         pool = new MyDBPool(db, dbuser, dbpass);
+    }
+
+    public int getIdbyName(String tname) {
+        Connection conn = pool.getConnection();
+        int tmp=0;
+
+        try {
+            PreparedStatement st = conn.prepareStatement(byName);
+            st.setString(1, tname);
+
+            ResultSet rs = st.executeQuery();
+
+            while (rs.next()) {
+                tmp = rs.getInt(1);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(TopicDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return tmp;
     }
 
     public void insertTopicsToDB(Topic... topics) throws SQLException{
@@ -52,7 +80,7 @@ public class TopicDao {
             int [] updateCounts = statement.executeBatch();
 
         } catch (BatchUpdateException e) {
-            e.printStackTrace();}
+            Logger.getLogger(TopicDao.class.getName()).log(Level.SEVERE, null, e);}
 
         pool.releaseConnection(conn);
 
@@ -100,4 +128,16 @@ public class TopicDao {
         return tmp;
     }
 
+    public static void main(String[] args) {
+        TopicDao test = new TopicDao();
+        System.out.println(test.getIdbyName(new String("Алгебра")));
+        System.out.println(test.getIdbyName("Math"));
+
+        try {
+            test.getAllTopicsFromDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
