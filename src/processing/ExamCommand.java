@@ -93,7 +93,7 @@ public class ExamCommand implements ProcessingCommand {
             List<Topic> topics = topicDao.getAllTopicsFromDB();
             request.setAttribute("topics", topics);
 
-            RequestDispatcher rd = request.getRequestDispatcher("/studlogin.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/restricted/studlogin.jsp");
             rd.forward(request, response);
         }
 
@@ -117,7 +117,7 @@ public class ExamCommand implements ProcessingCommand {
         request.setAttribute("curQText", text);
         request.setAttribute("answers", answers);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/exam.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/restricted/exam.jsp");
 
         rd.forward(request, response);
     }

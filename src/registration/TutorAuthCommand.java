@@ -53,7 +53,7 @@ public class TutorAuthCommand implements Command{
             System.out.println(httpSession.getAttribute("locale"));
             //request.setAttribute("send", "exit"); //?
 
-            RequestDispatcher rd = request.getRequestDispatcher("/tutorlogin.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/restricted/tutorlogin.jsp");
 
             rd.forward(request, response);
 

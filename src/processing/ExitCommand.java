@@ -16,10 +16,12 @@ public class ExitCommand implements ProcessingCommand {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 
         request.getSession().invalidate();
+        System.out.println(request.getSession().getAttribute("login"));
 
-        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-
-        rd.forward(request, response);
+//        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+//
+//        rd.forward(request, response);
+        response.sendRedirect("index.jsp");
     }
     public String toString() {
         return "exit";

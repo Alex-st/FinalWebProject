@@ -55,7 +55,7 @@ public class StudAuthCommand implements Command{
 
                 //request.setAttribute("send", "exit");
 
-                RequestDispatcher rd = request.getRequestDispatcher("/studlogin.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("/restricted/studlogin.jsp");
                // RequestDispatcher rd = request.getRequestDispatcher("/StudentResultsServlet");
 
                 rd.forward(request, response);

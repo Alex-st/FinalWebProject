@@ -9,6 +9,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri ="/WEB-INF/mytaglib.tld" prefix ="myjsp" %>
 
 <fmt:setLocale value="${locale}"/>
 <fmt:requestEncoding value="UTF-8" />
@@ -16,17 +17,22 @@
 
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title><fmt:message key="studentTitle"/></title>
 </head>
 <body>
   <center>
-
+    <div id="wrapper">
     <fmt:message key="studentTitle"/><br/>
 
-    <fmt:message key="hello"/> ${user}<br>
+  <%--  <fmt:message key="hello"/> ${user}<br> --%>
+
+    <h1> hidden text </h1><br>
+
 
     ${requestScope.result}<br>
-
+      <div id="register">
+        <myjsp:hello uname=" ${user}"/>
     <c:if test="${not empty results}" >
       <table>
         <tr>
@@ -49,6 +55,11 @@
         </button><br>
       </c:forEach>
     </form>
+        <c:import url="/menues/studentmenu.jsp"></c:import>
+        </div>
+
+
+      </div>
     </center>
 </body>
 </html>

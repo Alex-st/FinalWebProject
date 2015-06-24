@@ -75,7 +75,7 @@ public class CreateQCommand implements ProcessingCommand {
         Map<String, String> questions = questionsDao.getAllTutorQuestions((String)request.getSession().getAttribute("login"));
         request.setAttribute("questions", questions);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/tutorlogin.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/restricted/tutorlogin.jsp");
 
         rd.forward(request, response);
     }

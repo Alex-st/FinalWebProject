@@ -15,11 +15,15 @@
 
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>exam</title>
 </head>
 <body>
 <center>
-<br>
+
+  <div id="wrapper">
+
+    <div id="register">
   <form name="questionForm" action="tutorpage">
     <p><b>${curQText}</b></p>
 
@@ -29,6 +33,11 @@
 
     <button type="submit" name="send" value="exam"><fmt:message key="answerQuestion"/></button>
   </form>
+      <c:import url="/menues/studentmenu.jsp"></c:import>
+      </div>
+
+
+    </div>
 </center>
 </body>
 </html>

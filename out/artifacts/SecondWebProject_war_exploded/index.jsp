@@ -15,33 +15,37 @@
 
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <title><fmt:message key="title"/></title>
 </head>
 <body>
 ${requestScope.result}
-<br>
-<center>
-  <form method="post" action="authorization.jsp" >
-    <select name="locale">
-      <option value="en" name="opt">English</option>
-      <option value="ru" name="opt">Russian</option>
-    </select><br>
 
-    <button type="submit" name="button" value="Tutor" >
-      <fmt:message key="signInAsTutor"/>
-    </button><br>
-    <button type="submit" name="button" value="Student">
-      <fmt:message key="signInAsStudent"/>
-    </button><br>
-  </form>
+<div id="wrapper">
+  <div id="login">
+    <center>
+    <form method="post" action="authorization.jsp">
+      <select name="locale">
+        <option value="en" name="opt">English</option>
+        <option value="ru" name="opt">Russian</option>
+      </select><br>
 
-  <form method="post" action="registration.jsp">
-    <button type="submit" name = "button" value="Registration">
-      <fmt:message key="registrationButton"/>
-    </button>
-  </form>
+      <button type="submit" name="button" value="Tutor" >
+        <fmt:message key="signInAsTutor"/>
+      </button><br>
+      <button type="submit" name="button" value="Student">
+        <fmt:message key="signInAsStudent"/>
+      </button><br>
+    </form>
 
+    <form method="post" action="registration.jsp">
+      <button type="submit" name = "button" value="Registration">
+        <fmt:message key="registrationButton"/>
+      </button>
+    </form>
+    </center>
+    </div>
+</div>
 
-</center>
 </body>
 </html>

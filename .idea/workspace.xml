@@ -1,93 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="783f7267-cce8-448b-886e-176b40ca671d" name="Default" comment="2 commit with opportunity to add questions for tutor">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/CreateQCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/CreateQCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExamCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExamCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExitCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExitCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ProcessingCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ProcessingCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ProcessingFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ProcessingFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Result.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Result.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/ResultsDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/ResultsDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/TutorLoginPageServlet.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/TutorLoginPageServlet.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/processing/ExamCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/exam.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/exam.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/logconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/logconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/newquestion.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/personaldata.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/studlogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/text.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ru.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ru.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/text_ru.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ua.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ua.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/text_ua.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/tutorlogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/menues/tutormenu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/IndexServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/IndexServlet.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/IndexServlet.class" />
+    <list default="true" id="783f7267-cce8-448b-886e-176b40ca671d" name="Default" comment="3 commit - almost done, without filters and Factory for DAO">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/images/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/myservlets/RegistrationFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tldclasses/WelcomeTagHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/fonts/fontomas-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/mytaglib.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/mytaglib.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/menues/studentmenu.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/logconfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/exam.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/newquestion.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/personaldata.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/studlogin.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/tutorlogin.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/logconfig.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/log4j.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/exam.jsp" afterPath="$PROJECT_DIR$/web/restricted/exam.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/newquestion.jsp" afterPath="$PROJECT_DIR$/web/restricted/newquestion.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/personaldata.jsp" afterPath="$PROJECT_DIR$/web/restricted/personaldata.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/studlogin.jsp" afterPath="$PROJECT_DIR$/web/restricted/studlogin.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/tutorlogin.jsp" afterPath="$PROJECT_DIR$/web/restricted/tutorlogin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/CreateQCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/CreateQCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/CreateQCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/CreateQCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExamCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExamCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExamCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExamCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExitCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExitCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExitCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExitCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/MyDBPool.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/MyDBPool.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/MyDBPool.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/MyDBPool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/QuestionsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/QuestionsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/QuestionsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/QuestionsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/RegistrationCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/RegistrationCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/RegistrationCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/RegistrationCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/ResultsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/ResultsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/ResultsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/ResultsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/StudAuthCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/StudAuthCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/StudAuthCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/StudAuthCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/StudentsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/StudentsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/StudentsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/StudentsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TopicDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TopicDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TopicDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TopicDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/TutorAuthCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/TutorAuthCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/TutorAuthCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/TutorAuthCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/TutorLoginPageServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/TutorLoginPageServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/TutorLoginPageServlet.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/TutorLoginPageServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TutorsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TutorsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TutorsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TutorsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/CreateQCommand.java" afterPath="$PROJECT_DIR$/src/processing/CreateQCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ExamCommand.java" afterPath="$PROJECT_DIR$/src/processing/ExamCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ExitCommand.java" afterPath="$PROJECT_DIR$/src/processing/ExitCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/myservlets/IndexServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/pool/MyDBPool.java" afterPath="$PROJECT_DIR$/src/dao/pool/MyDBPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ProcessingCommand.java" afterPath="$PROJECT_DIR$/src/processing/ProcessingCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ProcessingFactory.java" afterPath="$PROJECT_DIR$/src/processing/ProcessingFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/QuestionsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/QuestionsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/RegistrationCommand.java" afterPath="$PROJECT_DIR$/src/registration/RegistrationCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/ResultsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/ResultsDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/StudAuthCommand.java" afterPath="$PROJECT_DIR$/src/registration/StudAuthCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/StudentsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/StudentsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/TopicDao.java" afterPath="$PROJECT_DIR$/src/dao/data/TopicDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" afterPath="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java" afterPath="$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/TutorsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/TutorsDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/authorization.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/authorization.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorization.jsp" afterPath="$PROJECT_DIR$/web/authorization.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/myconfig.properties" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/myconfig.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/resources/myconfig.properties" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/myconfig.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/myconfig.properties" afterPath="$PROJECT_DIR$/src/resources/myconfig.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/newquestion.jsp" afterPath="$PROJECT_DIR$/web/newquestion.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/registration.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/registration.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/registration.jsp" afterPath="$PROJECT_DIR$/web/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/studlogin.jsp" afterPath="$PROJECT_DIR$/web/studlogin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/tutorlogin.jsp" afterPath="$PROJECT_DIR$/web/tutorlogin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text.properties" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text.properties" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/text.properties" afterPath="$PROJECT_DIR$/src/resources/text.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ru.properties" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ru.properties" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/text_ru.properties" afterPath="$PROJECT_DIR$/src/resources/text_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ua.properties" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ua.properties" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/text_ua.properties" afterPath="$PROJECT_DIR$/src/resources/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/menues/tutormenu.jsp" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/menues/tutormenu.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/menues/tutormenu.jsp" afterPath="$PROJECT_DIR$/web/menues/tutormenu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -126,6 +108,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - mystudydb@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mystudydb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="students" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -133,31 +133,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExamCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processing/ExamCommand.java">
+      <file leaf-file-name="newquestion.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/restricted/newquestion.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+            <state vertical-scroll-proportion="-4.2">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/log4j.properties">
+      <file leaf-file-name="RegistrationFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/myservlets/RegistrationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.55427253">
+              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyDBPool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/pool/MyDBPool.java">
+      <file leaf-file-name="RegistrationCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/registration/RegistrationCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="86" selection-start-line="106" selection-start-column="86" selection-end-line="106" selection-end-column="86" />
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -167,57 +167,37 @@
         <entry file="file://$PROJECT_DIR$/src/myservlets/IndexServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExitCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processing/ExitCommand.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessingCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processing/ProcessingCommand.java">
+      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/registration.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.8">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/registration/CommandFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessingFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/processing/ProcessingFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34941763">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TutorLoginPageServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateQCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/processing/CreateQCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -230,6 +210,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -244,12 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/registration/Command.java" />
-        <option value="$PROJECT_DIR$/myconfig.properties" />
-        <option value="dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..students" />
-        <option value="$PROJECT_DIR$/src/dao/models/Result.java" />
-        <option value="dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..results" />
-        <option value="$PROJECT_DIR$/web/StudResults.jsp" />
         <option value="$PROJECT_DIR$/web/studresults.jsp" />
         <option value="$PROJECT_DIR$/src/myservlets/StudentResultsServlet.java" />
         <option value="$PROJECT_DIR$/web/personaldata.jsp" />
@@ -257,38 +232,50 @@
         <option value="$PROJECT_DIR$/src/registration/ExitCommand.java" />
         <option value="$PROJECT_DIR$/src/processing/ProcessingCommand.java" />
         <option value="$PROJECT_DIR$/src/registration/CommandFactory.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/processing/ProcessingFactory.java" />
         <option value="$PROJECT_DIR$/web/Exam.jsp" />
         <option value="$PROJECT_DIR$/src/resources/ru.properties" />
         <option value="$PROJECT_DIR$/src/resources/en.properties" />
-        <option value="$PROJECT_DIR$/src/registration/StudAuthCommand.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/authorization.jsp" />
-        <option value="$PROJECT_DIR$/web/menues/tutormenu.jsp" />
-        <option value="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" />
         <option value="$PROJECT_DIR$/src/dao/data/StudentsDao.java" />
         <option value="$PROJECT_DIR$/web/newquestion.jsp" />
-        <option value="$PROJECT_DIR$/web/registration.jsp" />
         <option value="$PROJECT_DIR$/src/registration/RegistrationCommand.java" />
         <option value="$PROJECT_DIR$/src/resources/myconfig.properties" />
         <option value="$PROJECT_DIR$/src/dao/data/QuestionsDao.java" />
-        <option value="$PROJECT_DIR$/src/processing/CreateQCommand.java" />
-        <option value="$PROJECT_DIR$/src/resources/text.properties" />
-        <option value="$PROJECT_DIR$/src/resources/text_ua.properties" />
-        <option value="$PROJECT_DIR$/src/resources/text_ru.properties" />
         <option value="$PROJECT_DIR$/web/studlogin.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7112c420-f165-4af6-81ee-723d9ef67ff3/console.sql" />
         <option value="$PROJECT_DIR$/web/exam.jsp" />
-        <option value="$PROJECT_DIR$/src/processing/ExamCommand.java" />
-        <option value="$PROJECT_DIR$/src/processing/ExitCommand.java" />
         <option value="$PROJECT_DIR$/web/tutorlogin.jsp" />
-        <option value="$PROJECT_DIR$/src/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/dao/data/ResultsDao.java" />
         <option value="$PROJECT_DIR$/src/dao/data/TopicDao.java" />
         <option value="$PROJECT_DIR$/src/dao/data/TutorsDao.java" />
         <option value="$PROJECT_DIR$/src/dao/pool/MyDBPool.java" />
         <option value="$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java" />
+        <option value="$PROJECT_DIR$/src/registration/StudAuthCommand.java" />
+        <option value="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" />
+        <option value="$PROJECT_DIR$/src/processing/CreateQCommand.java" />
+        <option value="$PROJECT_DIR$/src/processing/ExamCommand.java" />
+        <option value="$PROJECT_DIR$/web/menues/tutormenu.jsp" />
+        <option value="$PROJECT_DIR$/web/menues/studentmenu.jsp" />
+        <option value="$PROJECT_DIR$/web/restricted/personaldata.jsp" />
+        <option value="$PROJECT_DIR$/src/processing/ExitCommand.java" />
+        <option value="$PROJECT_DIR$/src/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/resources/mytaglib.tld" />
+        <option value="$PROJECT_DIR$/src/tldclasses/WelcomeTagHandler.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/css/style.css" />
+        <option value="$PROJECT_DIR$/web/restricted/tutorlogin.jsp" />
+        <option value="$PROJECT_DIR$/web/restricted/newquestion.jsp" />
+        <option value="$PROJECT_DIR$/web/restricted/exam.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/resources/text_ru.properties" />
+        <option value="$PROJECT_DIR$/src/resources/text.properties" />
+        <option value="$PROJECT_DIR$/src/resources/text_ua.properties" />
+        <option value="$PROJECT_DIR$/web/authorization.jsp" />
+        <option value="$PROJECT_DIR$/web/restricted/studlogin.jsp" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/web/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/myservlets/RegistrationFilter.java" />
       </list>
     </option>
   </component>
@@ -303,14 +290,19 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="-3" />
-    <option name="width" value="1284" />
-    <option name="height" value="772" />
+    <option name="width" value="1260" />
+    <option name="height" value="765" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -335,6 +327,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -399,7 +394,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menues" />
+              <option name="myItemId" value="restricted" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondWebProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tldclasses" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,22 +479,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processing" />
+              <option name="myItemId" value="registration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,73 +502,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondWebProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -558,13 +524,16 @@
       <recent name="registration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/css/fonts" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/css/images" />
       <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/web/restricted" />
+      <recent name="$PROJECT_DIR$/src/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.23">
@@ -893,6 +862,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -995,12 +967,23 @@
       <workItem from="1434920692273" duration="7856000" />
       <workItem from="1434959678755" duration="6114000" />
       <workItem from="1434975271114" duration="1334000" />
-      <workItem from="1435001403692" duration="1076000" />
+      <workItem from="1435001403692" duration="1791000" />
+      <workItem from="1435061168488" duration="628000" />
+      <workItem from="1435074093129" duration="7294000" />
+      <workItem from="1435088779336" duration="9059000" />
+      <workItem from="1435131009800" duration="11727000" />
     </task>
+    <task id="LOCAL-00001" summary="3 commit - almost done, without filters and Factory for DAO">
+      <created>1435002620501</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1435002620501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137231000" />
+    <option name="totallyTimeSpent" value="166654000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1012,7 +995,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-3" width="1284" height="772" extended-state="6" />
+    <frame x="0" y="0" width="1260" height="765" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1020,26 +1003,26 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19390348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19357497" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2154742" sideWeight="0.35618728" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21492007" sideWeight="0.36443663" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26441514" sideWeight="0.39782608" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657512" sideWeight="0.6355634" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26441514" sideWeight="0.6021739" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25925925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25955415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274648" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1086,7 +1069,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2 commit with opportunity to add questions for tutor" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 commit with opportunity to add questions for tutor" />
+    <MESSAGE value="3 commit - almost done, without filters and Factory for DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 commit - almost done, without filters and Factory for DAO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1097,64 +1081,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/myservlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorization.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/myservlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorization.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/pool/DBConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6741573">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/models/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55166376">
@@ -1169,13 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/personaldata.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/registration/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22181146">
@@ -1183,44 +1102,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/menues/tutormenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9745763">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4178273">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..tutors">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/registration/RegistrationCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4400978">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1231,54 +1121,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/registration/TutorAuthCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57457215">
-          <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/newquestion.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.09915014">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/text_ua.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9204244">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/text.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7612732">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorization.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43930635">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..topics">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1300,58 +1151,198 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1825397">
           <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
-          <folding>
-            <element signature="e#1824#1825#0" expanded="false" />
-            <element signature="e#1866#1867#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/studlogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81707317">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/exam.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2916667">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..questions">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..results">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/data/TopicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7986689">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/data/TutorsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72545755">
+          <caret line="151" column="83" selection-start-line="151" selection-start-column="83" selection-end-line="151" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/data/StudentsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.79866886">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/data/ResultsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6239601">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/pool/MyDBPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="86" selection-start-line="106" selection-start-column="86" selection-end-line="106" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processing/CreateQCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58429563">
+          <caret line="77" column="73" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processing/ProcessingFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4803695">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processing/ProcessingCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24249423">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2020202">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processing/ExamCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="73" selection-start-line="119" selection-start-column="73" selection-end-line="119" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registration/TutorAuthCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7829099">
+          <caret line="60" column="90" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/menues/studentmenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58679706">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/menues/tutormenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.596577">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/restricted/personaldata.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5874674">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/data/QuestionsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/processing/ExitCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55427253">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/images/bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tldclasses/WelcomeTagHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8614319">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registration/StudAuthCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51501155">
+          <caret line="57" column="81" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/mytaglib.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58429563">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mytaglib.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/restricted/exam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3707572">
+          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,133 +1351,83 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42288557">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42494226">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/tutorlogin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/resources/text.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8614319">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/registration/StudAuthCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/text_ua.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state vertical-scroll-proportion="1.2124711">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/authorization.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5483029">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41108546">
+          <caret line="244" column="13" selection-start-line="244" selection-start-column="13" selection-end-line="244" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/restricted/tutorlogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3916449">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/restricted/studlogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25587466">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/restricted/newquestion.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/registration/CommandFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22462562">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..students">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/data/TopicDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7986689">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <marker date="1435002433594" expanded="true" signature="-1:-1" placeholder="SELECT idtop..topics..." />
-            <marker date="1435002433594" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1435002433594" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1435002433594" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..topics..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/data/TutorsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72545755">
-          <caret line="151" column="83" selection-start-line="151" selection-start-column="83" selection-end-line="151" selection-end-column="83" />
-          <folding>
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..tutors..." />
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="SELECT tName..tutors..." />
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="SELECT idtut..tutors..." />
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1435002433658" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tutors..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/data/StudentsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.79866886">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <marker date="1434885098862" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..students..." />
-            <marker date="1434885098862" expanded="true" signature="-1:-1" placeholder="SELECT studN..students..." />
-            <marker date="1434885098862" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434885098862" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434885098862" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..students..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/data/ResultsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6239601">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <marker date="1435002433654" expanded="true" signature="-1:-1" placeholder="SELECT topic..results..." />
-            <marker date="1435002433654" expanded="true" signature="-1:-1" placeholder="SELECT idStu..students..." />
-            <marker date="1435002433654" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1435002433654" expanded="true" signature="-1:-1" placeholder="SELECT idstu..students..." />
-            <marker date="1435002433654" expanded="true" signature="-1:-1" placeholder="SELECT idtop..topics..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/data/QuestionsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.47254574">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="SELECT quest..questions..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="SELECT idtut..tutors..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..questions..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="SELECT idtop..topics..." />
-            <marker date="1434923599310" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..questions..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/pool/MyDBPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="86" selection-start-line="106" selection-start-column="86" selection-end-line="106" selection-end-column="86" />
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1494,55 +1435,60 @@
     <entry file="file://$PROJECT_DIR$/src/myservlets/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35452324">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34180138">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registration/RegistrationCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/processing/ExamCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/b3240e67/7112c420-f165-4af6-81ee-723d9ef67ff3/mystudydb..students">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="80" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/processing/ExitCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/myservlets/RegistrationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processing/CreateQCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processing/ProcessingCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/processing/ProcessingFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34941763">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.55427253">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
           <folding />
         </state>
       </provider>

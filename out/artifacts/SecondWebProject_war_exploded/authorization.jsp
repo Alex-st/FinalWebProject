@@ -17,6 +17,8 @@
 
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
   <c:if test="${param.button=='Student'}" ><title><fmt:message key="authStudentPage"/></title></c:if>
   <c:if test="${param.button=='Tutor'}" ><title><fmt:message key="authTutorPage"/></title></c:if>
 
@@ -24,16 +26,30 @@
 <body>
 <br>
 <br>
-<center>
-  <c:if test="${param.button=='Student'}" ><title><fmt:message key="authStudentPage"/></title></c:if>
-  <c:if test="${param.button=='Tutor'}" ><title><fmt:message key="authTutorPage"/></title></c:if>
+<div id="wrapper">
+  <div id="login">
+    <p>
+    <h1>
+    <fmt:message key="authButton"/> ${param.button}
+    <c:if test="${param.button=='Student'}" ><title><fmt:message key="authStudentPage"/></title></c:if>
+    <c:if test="${param.button=='Tutor'}" ><title><fmt:message key="authTutorPage"/></title></c:if>
+    </h1>
+    </p>
+    <form action='authorization' method="post">
+      <p>
+        <label for="blogin" class="uname" data-icon="u" ><fmt:message key="loginButton"/></label>
+        <input id="blogin" type='text' name='login' /><br>
+      </p>
+      <p>
+        <label for="password" class="youpasswd" data-icon="p"><fmt:message key="passButton"/></label>
+        <input id="password" type='password' name='password' /><br>
+      </p>
+      <p class="login button">
+        <button type='submit' name='send' value='signAs<%= request.getParameter("button") %>'><fmt:message key="authButton"/></button><br>
+      </p>
+  </form>
+  </div>
+</div>
 
-<form action='authorization' method="post">
-  <fmt:message key="loginButton"/><input type='text' name='login' /><br>
-  <fmt:message key="passButton"/><input type='password' name='password' /><br>
-  <button type='submit' name='send' value='signAs<%= request.getParameter("button") %>'><fmt:message key="authButton"/></button><br>
-
-</form>
-</center>
 </body>
 </html>

@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri ="/WEB-INF/mytaglib.tld" prefix ="myjsp" %>
 
 <fmt:setLocale value="${locale}"/>
 <fmt:requestEncoding value="UTF-8" />
@@ -17,14 +18,17 @@
 
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title><fmt:message key="tutorTitle"/></title>
 </head>
 <body>
 <center>
-  <fmt:message key="hello"/> "${user}"
+  <div id="wrapper">
+  <%--  <fmt:message key="hello"/> ${user}<br> --%>
+  <myjsp:hello uname=" ${user}"/> <br>
 
   ${requestScope.result}
-
+  <div id="register">
 <c:if test="${not empty questions}" >
   <p><fmt:message key="listOfQuestion"/></p>
   <table>
@@ -41,10 +45,12 @@
   </table>
 </c:if>
 <br><br>
-
     <c:import url="/menues/tutormenu.jsp"></c:import>
+  </div>
 
+</div>
 </center>
+
 <%--<select name="qtopic">
   <c:forEach var="topic" items="${topics}">
     <option value="${topic.topicName}" name="opt">${topic.topicName}</option>
