@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/18/15.
@@ -30,7 +30,7 @@ public class TutorLoginPageServlet extends HttpServlet {
         try {
             c.execute(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(TutorLoginPageServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TutorLoginPageServlet.class.getName()).log(Level.ERROR, null, ex);
         }
     }
 
@@ -43,7 +43,7 @@ public class TutorLoginPageServlet extends HttpServlet {
         try {
             c.execute(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(TutorLoginPageServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TutorLoginPageServlet.class.getName()).log(Level.ERROR, null, ex);
         }
     }
 }

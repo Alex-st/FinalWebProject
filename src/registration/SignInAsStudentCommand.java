@@ -1,0 +1,22 @@
+package registration;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+
+/**
+ * Created by alex on 6/24/15.
+ */
+public class SignInAsStudentCommand implements Command {
+    @Override
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("button", "Student");
+
+        RequestDispatcher rd = request.getRequestDispatcher("/authorization.jsp");
+        rd.forward(request, response);
+    }
+
+}

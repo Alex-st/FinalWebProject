@@ -3,16 +3,19 @@ package dao.data;
 import dao.models.Topic;
 import dao.pool.MyDBPool;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  * Created by alex on 6/15/15.
@@ -59,7 +62,7 @@ public class TopicDao {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(TopicDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TopicDao.class.getName()).log(Level.INFO, null, ex);
         }
         return tmp;
     }
@@ -80,7 +83,7 @@ public class TopicDao {
             int [] updateCounts = statement.executeBatch();
 
         } catch (BatchUpdateException e) {
-            Logger.getLogger(TopicDao.class.getName()).log(Level.SEVERE, null, e);}
+            Logger.getLogger(TopicDao.class.getName()).log(Level.INFO, null, e);}
 
         pool.releaseConnection(conn);
 
@@ -132,6 +135,14 @@ public class TopicDao {
         TopicDao test = new TopicDao();
         System.out.println(test.getIdbyName(new String("Алгебра")));
         System.out.println(test.getIdbyName("Math"));
+
+        URL resource = Thread.currentThread().getContextClassLoader()
+                .getResource("log4j.properties");
+        System.out.println("resource = " + resource);
+
+        final Logger logger = Logger.getLogger(TopicDao.class.getName());
+
+        logger.info("Hello world");
 
         try {
             test.getAllTopicsFromDB();

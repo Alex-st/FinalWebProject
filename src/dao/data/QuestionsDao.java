@@ -2,15 +2,14 @@ package dao.data;
 
 import dao.models.Question;
 import dao.pool.MyDBPool;
-import myservlets.IndexServlet;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -36,7 +35,7 @@ public class QuestionsDao {
             prop.load(in);
         } catch (IOException ex) {
             System.out.println("config file not found");
-            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.ERROR, null, ex);
         }
 
         // get the property value and use it for dbpool
@@ -75,7 +74,11 @@ public class QuestionsDao {
             int [] updateCounts = statement.executeBatch();
 
         } catch (BatchUpdateException ex) {
-            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);}
+
+            Logger lg = Logger.getLogger(QuestionsDao.class.getName());
+
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.ERROR, null, ex);
+        }
 
         pool.releaseConnection(conn);
 
@@ -111,7 +114,7 @@ public class QuestionsDao {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(QuestionsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(QuestionsDao.class.getName()).log(Level.ERROR, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }

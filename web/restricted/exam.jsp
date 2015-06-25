@@ -19,25 +19,26 @@
     <title>exam</title>
 </head>
 <body>
-<center>
+
 
   <div id="wrapper">
 
     <div id="register">
   <form name="questionForm" action="tutorpage">
-    <p><b>${curQText}</b></p>
-
+    <p><b><center>${curQText}</center></b></p>
+    <center>
     <c:forEach var="ans" items="${answers}">
-      <p><input type="radio" name="answer" value="${ans}">${ans}</p>
+      <p class="keeplogin"><input type="radio" name="answer" value="${ans}" id="${ans}"><label for="${ans}">${ans}</label></p>
     </c:forEach>
 
     <button type="submit" name="send" value="exam"><fmt:message key="answerQuestion"/></button>
+        </center>
   </form>
       <c:import url="/menues/studentmenu.jsp"></c:import>
       </div>
 
 
     </div>
-</center>
+
 </body>
 </html>

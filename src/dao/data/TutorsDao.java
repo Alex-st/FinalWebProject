@@ -9,8 +9,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -33,7 +33,7 @@ public class TutorsDao {
             prop.load(in);
             //prop.load(new FileInputStream(propFileName));
         } catch (IOException e) {
-            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.INFO, null, e);
             Logger.getLogger(TutorsDao.class.getName()).info("config file not found");
             System.out.println("config file not found");
         }
@@ -65,7 +65,7 @@ public class TutorsDao {
             int [] updateCounts = statement.executeBatch();
 
         } catch (BatchUpdateException e) {
-            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);}
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.INFO, null, e);}
 
         pool.releaseConnection(conn);
 
@@ -100,7 +100,7 @@ public class TutorsDao {
             if (rs.getInt(1) > 0 )
                 return true;
         } catch (SQLException e) {
-            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.INFO, null, e);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -125,7 +125,7 @@ public class TutorsDao {
             }
 
         } catch (SQLException e) {
-            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.INFO, null, e);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -149,7 +149,7 @@ public class TutorsDao {
             }
 
         } catch (SQLException e) {
-            Logger.getLogger(TutorsDao.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(TutorsDao.class.getName()).log(Level.INFO, null, e);
         } finally {
             pool.releaseConnection(conn);
         }

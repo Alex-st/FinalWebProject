@@ -24,7 +24,9 @@ ${requestScope.result}
 <div id="wrapper">
   <div id="login">
     <center>
+
     <form method="post" action="authorization.jsp">
+
       <select name="locale">
         <option value="en" name="opt">English</option>
         <option value="ru" name="opt">Russian</option>

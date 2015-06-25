@@ -22,8 +22,11 @@
 <body>
 <div id="wrapper">
 
-  <c:out value="${param.locale}" />
-  ${requestScope.result}
+  <center>
+    <c:if test="${not empty requestScope.result}">
+  <fmt:message key="${requestScope.result}"/>
+    </c:if>
+  </center>
   <div id="register">
 <form action='authorization' method="post">
   <p>
@@ -61,6 +64,7 @@
 
 </form>
     </div>
+
 </div>
 </body>
 </html>

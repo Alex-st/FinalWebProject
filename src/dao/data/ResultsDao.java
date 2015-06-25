@@ -12,8 +12,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/18/15.
@@ -40,7 +40,7 @@ public class ResultsDao {
             //prop.load(new FileInputStream(propFileName));
         } catch (IOException ex) {
             System.out.println("config file not found");
-            Logger.getLogger(ResultsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ResultsDao.class.getName()).log(Level.ERROR, null, ex);
             Logger.getLogger(ResultsDao.class.getName()).info("config file not found");
         }
 
@@ -68,7 +68,7 @@ public class ResultsDao {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(ResultsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ResultsDao.class.getName()).log(Level.ERROR, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -88,7 +88,7 @@ public class ResultsDao {
             st.executeUpdate();
 
         } catch (SQLException ex) {
-            Logger.getLogger(ResultsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ResultsDao.class.getName()).log(Level.ERROR, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }

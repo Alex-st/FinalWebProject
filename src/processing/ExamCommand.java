@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/19/15.
@@ -32,23 +34,23 @@ public class ExamCommand implements ProcessingCommand {
         List<Question> qlist = qd.getQuestionsByTopic(new String(request.getParameter("test").getBytes("iso-8859-1"), "UTF-8"));
         request.getSession().setAttribute("examQuestions", qlist);
 
-        System.out.println("test initialization");
+
+        Logger.getLogger(QuestionsDao.class.getName()).info("test initialization: "+request.getSession().getAttribute("login"));
     }
 
     public void processPreviousAnswer(HttpServletRequest request) throws IOException {
         List<Question> temp = (List<Question>)request.getSession().getAttribute("examQuestions");
         Question previousQ = temp.remove(0);
 
-        System.out.println("previous Question proccessing"+temp.size());
-        System.out.println(previousQ.getqCorrectAnswer());
-        System.out.println(request.getParameter("answer"));
-        System.out.println(previousQ.getqCorrectAnswer().equals(new String(request.getParameter("answer").getBytes("iso-8859-1"), "UTF-8")));
+//        System.out.println("previous Question proccessing"+temp.size());
+//        System.out.println(previousQ.getqCorrectAnswer());
+//        System.out.println(request.getParameter("answer"));
+//        System.out.println(previousQ.getqCorrectAnswer().equals(new String(request.getParameter("answer").getBytes("iso-8859-1"), "UTF-8")));
 
         if (previousQ.getqCorrectAnswer().equals(request.getParameter("answer"))) {
             int res = (int)request.getSession().getAttribute("quizResult");
             request.getSession().setAttribute("quizResult", ++res);
 
-            System.out.println("answer correct"+res);
         }
 
         request.getSession().setAttribute("examQuestions", temp);
@@ -71,10 +73,10 @@ public class ExamCommand implements ProcessingCommand {
 
         List<Question> curList = (List<Question>)request.getSession().getAttribute("examQuestions");
 
-        //TODO finish test
+
         if (curList.size() == 0) {
 
-            System.out.println("finishing test");
+            Logger.getLogger(QuestionsDao.class.getName()).info("test finished: "+request.getSession().getAttribute("login"));
 
             int res = (int)request.getSession().getAttribute("quizResult");
             request.setAttribute("result", "Ваш результат за тест "+request.getSession().getAttribute("isTestRun")+": "+res);

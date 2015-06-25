@@ -19,15 +19,12 @@
     <title><fmt:message key="questionTitle"/></title>
 </head>
 <body>
-<center>
   <div id="wrapper">
 
-    <div id="register">
   <br>
   ${locale}<br>
   <fmt:message key="hello"/> ${user}<br>
   <fmt:message key="writeQuestion"/><br>
-  <%= request.getAttribute("rtopics") %>
 
 <form action='tutorpage' method="post">
 
@@ -54,9 +51,8 @@
   <button type="submit" name="send" value="newquestion"><fmt:message key="addQuestion"/></button>
 </form>
       <c:import url="/menues/tutormenu.jsp"></c:import>
-      </div>
 
     </div>
-</center>
+
 </body>
 </html>

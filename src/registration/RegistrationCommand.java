@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/17/15.
@@ -68,9 +70,9 @@ public class RegistrationCommand implements Command {
         try {
             rd.forward(request, response);
         } catch (ServletException e) {
-            e.printStackTrace();
+            Logger.getLogger(RegistrationCommand.class.getName()).log(Level.ERROR, null, e);
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(RegistrationCommand.class.getName()).log(Level.ERROR, null, e);
         }
     }
 

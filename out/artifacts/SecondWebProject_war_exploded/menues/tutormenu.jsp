@@ -16,8 +16,8 @@
 <ul class="makeMenu">
   <li><a href="restricted/newquestion.jsp"><fmt:message key="createQuestion"/></a>
   </li>
-  <li><a href="restricted/personaldata.jsp"><fmt:message key="modifyPersonalData"/></a>
-  </li>
+ <%-- <li><a href="restricted/personaldata.jsp"><fmt:message key="modifyPersonalData"/></a>
+  </li>--%>
   <li><a href="/tutorpage?send=exit"><fmt:message key="exitbutton"/></a>
   </li>
  </ul>

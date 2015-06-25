@@ -15,6 +15,10 @@ public class CommandFactory {
         commands.put("signAsStudent", new StudAuthCommand());
         commands.put("signAsTutor", new TutorAuthCommand());
         commands.put("register", new RegistrationCommand());
+//        commands.put("StudentForm", new SignInAsStudentCommand());
+//        commands.put("TutorForm", new SignInAsTutorCommand());
+//        commands.put("registerForm", new RegistrFormCommand());
+
     }
 
     public static Command getCommand(HttpServletRequest request) {

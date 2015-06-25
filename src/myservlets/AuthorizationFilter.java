@@ -16,7 +16,7 @@ public class AuthorizationFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
 
-        System.out.println(((HttpServletRequest)request).getSession().getAttribute("login"));
+        //System.out.println(((HttpServletRequest)request).getSession().getAttribute("login"));
         if (((HttpServletRequest)request).getSession().getAttribute("login") == null) {
             request.setAttribute("result", "<center>You haven't permissions for this resource.<br> Sign in please.</center>");
             RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");

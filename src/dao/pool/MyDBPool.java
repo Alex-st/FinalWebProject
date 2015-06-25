@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/8/15.
@@ -43,13 +43,13 @@ public class MyDBPool {
 //                    DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/"+dbName+"?characterEncoding=UTF-8", user, pass);
 
         } catch (InstantiationException e) {
-            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
         } catch (IllegalAccessException e) {
-            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
         } catch (ClassNotFoundException e) {
-            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
         } catch (SQLException e) {
-            Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
         }
 
     }
@@ -69,7 +69,7 @@ public class MyDBPool {
             try {
                 i.getKey().close();
             } catch (SQLException e) {
-                Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+                Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
             }
         }
 //        try {
@@ -104,7 +104,7 @@ public class MyDBPool {
             try {
                 temp = addNewConnection();
             } catch (SQLException e) {
-                Logger.getLogger(MyDBPool.class.getName()).log(Level.SEVERE, null, e);
+                Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
             }
         else {
             dbpool.remove(temp);

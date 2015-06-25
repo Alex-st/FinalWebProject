@@ -9,8 +9,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 /**
  * Created by alex on 6/15/15.
@@ -35,7 +35,7 @@ public class StudentsDao {
             //prop.load(new FileInputStream(propFileName));
         } catch (IOException ex) {
             System.out.println("config file not found");
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ex);
         }
 
         // get the property value and use it for dbpool
@@ -67,9 +67,9 @@ public class StudentsDao {
         int [] updateCounts = statement.executeBatch();
 
     } catch (BatchUpdateException ex) {
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);}
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ex);}
         catch (SQLException ee) {
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ee);
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ee);
         }
 
         pool.releaseConnection(conn);
@@ -105,7 +105,7 @@ public class StudentsDao {
             if (rs.getInt(1) > 0 )
                 return true;
         } catch (SQLException ex) {
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -129,7 +129,7 @@ public class StudentsDao {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ex);
         } finally {
             pool.releaseConnection(conn);
         }
@@ -174,7 +174,7 @@ public class StudentsDao {
         try {
             test.studentsList = test.getAllStudentsFromDB();
         } catch (SQLException ex) {
-            Logger.getLogger(StudentsDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsDao.class.getName()).log(Level.ERROR, null, ex);
         }
         System.out.println(test.studentsList.size());
         for(Student i: test.studentsList) {
