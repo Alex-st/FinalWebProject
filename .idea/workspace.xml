@@ -2,75 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="783f7267-cce8-448b-886e-176b40ca671d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/AuthorizationFilter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/AuthorizationFilter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/RegistrFormCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/RegistrFormCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/RegistrationFilter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/RegistrationFilter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/SignInAsStudentCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/SignInAsStudentCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/SignInAsTutorCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/SignInAsTutorCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/tldclasses/WelcomeTagHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/tldclasses/WelcomeTagHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/fonts/fontomas-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/fonts/fontomas-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/fonts/fontomas-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/errorpage.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/restricted/exam.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/fonts/fontomas-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/mytaglib.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/resources/mytaglib.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/resources/mytaglib.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/restricted/newquestion.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/restricted/personaldata.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/menues/studentmenu.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/restricted/studlogin.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/restricted/tutorlogin.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/registration/RegistrFormCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/registration/SignInAsStudentCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/registration/SignInAsTutorCommand.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExamCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExamCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExamCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExamCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/IndexServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/MyDBPool.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/MyDBPool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/RegistrationCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/RegistrationCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/ResultsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/ResultsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/StudentsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/StudentsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/TutorLoginPageServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/myservlets/TutorLoginPageServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TutorsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TutorsDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java" afterPath="$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/CommandFactory.java" afterPath="$PROJECT_DIR$/src/registration/CommandFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/CreateQCommand.java" afterPath="$PROJECT_DIR$/src/processing/CreateQCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/pool/DBConnect.java" afterPath="$PROJECT_DIR$/src/dao/pool/DBConnect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ExamCommand.java" afterPath="$PROJECT_DIR$/src/processing/ExamCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ExitCommand.java" afterPath="$PROJECT_DIR$/src/processing/ExitCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/myservlets/IndexServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/pool/MyDBPool.java" afterPath="$PROJECT_DIR$/src/dao/pool/MyDBPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/processing/ProcessingFactory.java" afterPath="$PROJECT_DIR$/src/processing/ProcessingFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/models/Question.java" afterPath="$PROJECT_DIR$/src/dao/models/Question.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/QuestionsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/QuestionsDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mystudydb.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/CommandFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/CommandFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/CommandFactory.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/CommandFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/CreateQCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/CreateQCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/CreateQCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/CreateQCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/DBConnect.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/pool/DBConnect.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/DBConnect.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/DBConnect.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExitCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ExitCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExitCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ExitCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/IndexServlet.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/IndexServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/MyDBPool.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/pool/MyDBPool.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ProcessingFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/processing/ProcessingFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ProcessingFactory.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/processing/ProcessingFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Question.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Question.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Question.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Question.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/QuestionsDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/QuestionsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/QuestionsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/QuestionsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/RegistrationCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/RegistrationCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Result.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Result.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/ResultsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/ResultsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/StudAuthCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/StudAuthCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/StudAuthCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/StudAuthCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Student.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Student.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/StudentsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/StudentsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Topic.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Topic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Topic.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Topic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TopicDao.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/data/TopicDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TopicDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TopicDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Tutor.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/dao/models/Tutor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Tutor.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/models/Tutor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/TutorAuthCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/SecondWebProject_war_exploded/WEB-INF/classes/registration/TutorAuthCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/registration/TutorAuthCommand.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/registration/TutorAuthCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/TutorLoginPageServlet.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/myservlets/TutorLoginPageServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TutorsDao.class" afterPath="$PROJECT_DIR$/out/production/SecondWebProject/dao/data/TutorsDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/RegistrationCommand.java" afterPath="$PROJECT_DIR$/src/registration/RegistrationCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/RegistrationFilter.java" afterPath="$PROJECT_DIR$/src/myservlets/RegistrationFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/models/Result.java" afterPath="$PROJECT_DIR$/src/dao/models/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/ResultsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/ResultsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/StudAuthCommand.java" afterPath="$PROJECT_DIR$/src/registration/StudAuthCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/models/Student.java" afterPath="$PROJECT_DIR$/src/dao/models/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/StudentsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/StudentsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/models/Topic.java" afterPath="$PROJECT_DIR$/src/dao/models/Topic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/TopicDao.java" afterPath="$PROJECT_DIR$/src/dao/data/TopicDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/models/Tutor.java" afterPath="$PROJECT_DIR$/src/dao/models/Tutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" afterPath="$PROJECT_DIR$/src/registration/TutorAuthCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java" afterPath="$PROJECT_DIR$/src/myservlets/TutorLoginPageServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/data/TutorsDao.java" afterPath="$PROJECT_DIR$/src/dao/data/TutorsDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tldclasses/WelcomeTagHandler.java" afterPath="$PROJECT_DIR$/src/tldclasses/WelcomeTagHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SecondWebProject.iws" />
@@ -132,10 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AuthorizationFilter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthorizationFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16997167">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding />
             </state>
@@ -152,21 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommandFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/registration/CommandFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.76487255">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4615386">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -1000,7 +958,7 @@
       <workItem from="1435232980330" duration="6718000" />
       <workItem from="1435241026644" duration="426000" />
       <workItem from="1435258212090" duration="14996000" />
-      <workItem from="1435313719491" duration="4900000" />
+      <workItem from="1435313719491" duration="5786000" />
     </task>
     <task id="LOCAL-00001" summary="3 commit - almost done, without filters and Factory for DAO">
       <created>1435002620501</created>
@@ -1020,11 +978,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435273140249</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6th commit - Final variant with filters, log4j, css and comments">
+      <created>1435318719277</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1435318719277</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199945000" />
+    <option name="totallyTimeSpent" value="200831000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1037,7 +1001,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1224" height="765" extended-state="4" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1021,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2614601" sideWeight="0.6021739" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2614601" sideWeight="0.6021739" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38808373" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274648" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1077,8 @@
     <MESSAGE value="3 commit - almost done, without filters and Factory for DAO" />
     <MESSAGE value="4th commit - with filters but without DAO Factory" />
     <MESSAGE value="5th commit - Final variant with filters, log4j and css" />
-    <option name="LAST_COMMIT_MESSAGE" value="5th commit - Final variant with filters, log4j and css" />
+    <MESSAGE value="6th commit - Final variant with filters, log4j, css and comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="6th commit - Final variant with filters, log4j, css and comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1484,8 +1449,8 @@
         <state vertical-scroll-proportion="0.26767677">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding>
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1502,14 +1467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12626262">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/registration/CommandFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1542,14 +1499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/myservlets/RegistrationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1560,8 +1509,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/myservlets/AuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16997167">
+        <state vertical-scroll-proportion="0.0">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27522936">
+          <caret line="6" column="84" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registration/CommandFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76487255">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
