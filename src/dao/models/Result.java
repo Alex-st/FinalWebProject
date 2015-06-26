@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * /**
+ * * <h1>Result</h1>
+ * Result class is responsible for single entity in result table
  * Created by alex on 6/18/15.
  */
 public class Result {

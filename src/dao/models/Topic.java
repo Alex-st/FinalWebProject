@@ -2,6 +2,8 @@ package dao.models;
 
 
 /**
+ * * <h1>Topic</h1>
+ * Topic class is responsible for single entity if topic table
  * Created by alex on 6/11/15.
  */
 

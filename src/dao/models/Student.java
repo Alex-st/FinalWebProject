@@ -2,8 +2,12 @@ package dao.models;
 
 
 /**
+ * /**
+ * * <h1>Student</h1>
+ * Student class is responsible for single entity if Student table
  * Created by alex on 6/11/15.
  */
+
 
 public class Student {
     private int idstudents;

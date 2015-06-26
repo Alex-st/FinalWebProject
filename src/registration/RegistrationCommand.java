@@ -15,6 +15,8 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
+ * <h1>RegistrationCommand</h1>
+ * Class responsible for creation of new user in system
  * Created by alex on 6/17/15.
  */
 public class RegistrationCommand implements Command {

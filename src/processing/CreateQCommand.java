@@ -14,6 +14,8 @@ import java.sql.SQLException;
 import java.util.Map;
 
 /**
+ * <h1>CreateQCommand</h1>
+ * CreateQCommand implements logic for creating new question and adding it to DB
  * Created by alex on 6/18/15.
  */
 public class CreateQCommand implements ProcessingCommand {
@@ -31,16 +33,8 @@ public class CreateQCommand implements ProcessingCommand {
         String qtopicString = new String (request.getParameter("qtopic").getBytes ("iso-8859-1"), "UTF-8");
 //        String qtext = request.getParameter("qtext");
 //        System.out.println(qtext);
-//
-//        String correctanswer = request.getParameter("correctanswer");
-//
-//        String q2 = request.getParameter("q2");
-//        String q3 = request.getParameter("q3");
-//        String q4 = request.getParameter("q4");
-//        String q5 = request.getParameter("q5");
 
         TopicDao tp = new TopicDao();
-//        Integer qtopic = tp.getIdbyName(request.getParameter("qtopic"));
         Integer qtopic = tp.getIdbyName(qtopicString);
 
         TutorsDao td = new TutorsDao();

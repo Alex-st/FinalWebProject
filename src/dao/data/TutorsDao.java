@@ -13,7 +13,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * Created by alex on 6/15/15.
+ * <h1>TutorsDao</h1>
+ * TutorsDao class is responsible for Data Access Object in DAO pattern
+ * for tutors table. Logic for processing data from table "tutors" is
+ * implemented here ()
+ *
  */
 public class TutorsDao {
     private List<Tutor> tutorsList;

@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * <h1>StudAuthCommand</h1>
+ * Class is responsible for student authentication. Initializes all
+ * required parameters for further student work
  * Created by alex on 6/17/15.
  */
 public class StudAuthCommand implements Command{
@@ -33,11 +36,6 @@ public class StudAuthCommand implements Command{
         StudentsDao studentsDao = new StudentsDao();
         ResultsDao resultsDao = new ResultsDao();
         TopicDao topicDao = new TopicDao();
-
-//
-//        System.out.println(login);
-//        System.out.println(password);
-//        System.out.println(studentsDao.findStudent(student));
 
             if (studentsDao.findStudent(student)) {
 

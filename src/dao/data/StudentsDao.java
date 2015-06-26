@@ -13,7 +13,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * Created by alex on 6/15/15.
+ * <h1>StudentsDao</h1>
+ * StudentsDao class is responsible for Data Access Object in DAO pattern
+ * for students table. Logic for processing data from table "students" is
+ * implemented here ()
+ *
  */
 public class StudentsDao {
     private List<Student> studentsList;
@@ -145,7 +149,6 @@ public class StudentsDao {
 
         ResultSet rs = st.executeQuery("SELECT * FROM students");
 //        ResultSetMetaData rsmd = rs.getMetaData();
-//
 //        int columns = rsmd.getColumnCount();
 
         while (rs.next()) {
@@ -164,7 +167,7 @@ public class StudentsDao {
         return tmp;
     }
 
-
+    //main method for testing
     public static void main(String[] args) {
         StudentsDao test = new StudentsDao();
         Student testStudent = new Student(2, "максим", "перепилица", "perepel", "test", "mail");

@@ -16,7 +16,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * Created by alex on 6/18/15.
+ * <h1>ResultsDao</h1>
+ * ResultsDao class is responsible for Data Access Object in DAO pattern
+ * for "results" table. Logic for processing data from table "results" is
+ * implemented here ()
+ *
  */
 public class ResultsDao {
     private MyDBPool pool;
@@ -93,7 +97,7 @@ public class ResultsDao {
             pool.releaseConnection(conn);
         }
     }
-
+    //main method for testing
     public static void main(String[] args) {
         ResultsDao test = new ResultsDao();
 

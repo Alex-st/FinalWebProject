@@ -1,6 +1,8 @@
 package dao.models;
 
 /**
+ * * <h1>Tutor</h1>
+ * Tutor class is responsible for single entity if tutors table
  * Created by alex on 6/11/15.
  */
 public class Tutor {

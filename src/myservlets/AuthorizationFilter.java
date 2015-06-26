@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * <h1>AuthorizationFilter</h1>
+ * Filter restricts access to all restricted web pages for unauthorized users
  * Created by alex on 6/23/15.
  */
 @WebFilter(filterName = "AuthorizationFilter")

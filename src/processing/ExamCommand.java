@@ -20,10 +20,20 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
+ *
+ * <h1>ExamCommand</h1>
+ * ExamCommand implements logic for student quiz. It also add to logfile information about
+ * quiz beginning and finishing
  * Created by alex on 6/19/15.
  */
 public class ExamCommand implements ProcessingCommand {
 
+    /**
+     * Method for quiz initialization. Reads topic name (from request parameter "test"),
+     * initializes quiz result in session as 0, and put to session parameter "examQuestions"
+     * list of appropriate topic questions from DB
+     * Created by alex on 6/19/15.
+     */
     public void testInitialization(HttpServletRequest request) throws IOException, SQLException{
 
         request.getSession().setAttribute("isTestRun", new String(request.getParameter("test").getBytes("iso-8859-1"), "UTF-8"));
@@ -34,20 +44,20 @@ public class ExamCommand implements ProcessingCommand {
         List<Question> qlist = qd.getQuestionsByTopic(new String(request.getParameter("test").getBytes("iso-8859-1"), "UTF-8"));
         request.getSession().setAttribute("examQuestions", qlist);
 
-
+        //log begining
         Logger.getLogger(QuestionsDao.class.getName()).info("test initialization: "+request.getSession().getAttribute("login"));
     }
 
+    /**
+     * Method checks whether user answer on question is correct or not and increases quizResult session attribute
+     * in positive case
+     * Created by alex on 6/19/15.
+     */
     public void processPreviousAnswer(HttpServletRequest request) throws IOException {
         List<Question> temp = (List<Question>)request.getSession().getAttribute("examQuestions");
         Question previousQ = temp.remove(0);
 
-//        System.out.println("previous Question proccessing"+temp.size());
-//        System.out.println(previousQ.getqCorrectAnswer());
-//        System.out.println(request.getParameter("answer"));
-//        System.out.println(previousQ.getqCorrectAnswer().equals(new String(request.getParameter("answer").getBytes("iso-8859-1"), "UTF-8")));
-
-        if (previousQ.getqCorrectAnswer().equals(request.getParameter("answer"))) {
+       if (previousQ.getqCorrectAnswer().equals(request.getParameter("answer"))) {
             int res = (int)request.getSession().getAttribute("quizResult");
             request.getSession().setAttribute("quizResult", ++res);
 
@@ -57,6 +67,11 @@ public class ExamCommand implements ProcessingCommand {
 
     }
 
+    /**
+     * Main processing method. It prepares current question shuffling answers
+     * and processes results if quiz has finished
+     * Created by alex on 6/19/15.
+     */
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 
         // Processing results of question
@@ -73,9 +88,10 @@ public class ExamCommand implements ProcessingCommand {
 
         List<Question> curList = (List<Question>)request.getSession().getAttribute("examQuestions");
 
-
+        // ----- module for processing quiz results
         if (curList.size() == 0) {
 
+            //log finishing
             Logger.getLogger(QuestionsDao.class.getName()).info("test finished: "+request.getSession().getAttribute("login"));
 
             int res = (int)request.getSession().getAttribute("quizResult");

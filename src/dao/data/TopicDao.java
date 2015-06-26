@@ -18,7 +18,11 @@ import java.util.Properties;
 
 
 /**
- * Created by alex on 6/15/15.
+ * <h1>TopicDao</h1>
+ * TopicDao class is responsible for Data Access Object in DAO pattern
+ * for topics table. Logic for processing data from table "topics" is
+ * implemented here
+ *
  */
 public class TopicDao {
     private List<Topic> topicsList;
@@ -131,6 +135,7 @@ public class TopicDao {
         return tmp;
     }
 
+    //main method for testing
     public static void main(String[] args) {
         TopicDao test = new TopicDao();
         System.out.println(test.getIdbyName(new String("Алгебра")));

@@ -17,6 +17,10 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
+ * /**
+ * * <h1>IndexServlet</h1>
+ * IndexServlet class is responsible for Controller entity in MVC model.
+ * It processes authorization and registrations pages calling appropriate commands from CommandFactory
  * Created by alex on 6/15/15.
  */
 @WebServlet(name = "IndexServlet")

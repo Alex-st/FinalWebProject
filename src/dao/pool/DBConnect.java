@@ -1,5 +1,7 @@
 /**
- * Created by alex on 6/6/15.
+ * * <h1>DBConnect</h1>
+ * DBConnect class is test class for MYDBPool. It is not used in web project logic
+ * Created by alex on 6/11/15.
  */
 package dao.pool;
 

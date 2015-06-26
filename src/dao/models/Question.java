@@ -1,6 +1,8 @@
 package dao.models;
 
 /**
+ * * <h1>Question</h1>
+ * Question class is responsible for single entity in question table
  * Created by alex on 6/11/15.
  */
 

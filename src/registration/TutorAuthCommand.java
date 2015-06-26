@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * <h1>TutorAuthCommand</h1>
+ * Class is responsible for tutors authentication. Initializes all
+ * required parameters for further tutor work
  * Created by alex on 6/18/15.
  */
 public class TutorAuthCommand implements Command{

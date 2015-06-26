@@ -16,6 +16,10 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
+ * /**
+ * * <h1>TutorLoginPageServlet</h1>
+ * TutorLoginPageServlet is responsible for Controller entity in MVC model.
+ * It processes authorized user pages calling appropriate commands from ProcessingFactory
  * Created by alex on 6/18/15.
  */
 @WebServlet(name = "TutorLoginPageServlet")

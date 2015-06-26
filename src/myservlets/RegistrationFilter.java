@@ -6,6 +6,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
+ * /**
+ * * <h1>RegistrationFilter</h1>
+ * RegistrationFilter check correctness of input data in registration form (registration.jsp)
+ * and returns appropriate message to user
  * Created by alex on 6/24/15.
  */
 @WebFilter(filterName = "RegistrationFilter")

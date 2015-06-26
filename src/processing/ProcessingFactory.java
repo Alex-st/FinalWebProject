@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * <h1>ProcessingFactory</h1>
+ * Factory for calling proper command handler due to received parameter
  * Created by alex on 6/18/15.
  */
 public class ProcessingFactory {

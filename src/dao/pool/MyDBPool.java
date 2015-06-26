@@ -9,7 +9,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * Created by alex on 6/8/15.
+ * * <h1>MyDBPool</h1>
+ * MyDBPool is realization of connection pool. Connections are stored in Map with Boolean value
+ * responsible for free connection. dbName, user and password to DB are stored in myconfig.properties
+ * file in "resources" directory.
+ * Created by alex on 6/11/15.
  */
 public class MyDBPool {
     Map<Connection, Boolean> dbpool;
@@ -72,11 +76,6 @@ public class MyDBPool {
                 Logger.getLogger(MyDBPool.class.getName()).log(Level.ERROR, null, e);
             }
         }
-//        try {
-//            connWithEncoding.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
     }
 
     public int numberOfConnections() {

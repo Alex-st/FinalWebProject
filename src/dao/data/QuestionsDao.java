@@ -12,7 +12,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * Created by alex on 6/15/15.
+ * <h1>QuestionsDao</h1>
+ * QuestionsDao class is responsible for Data Access Object in DAO pattern
+ * for Question table. Logic for processing data from table "questions" is
+ * implemented here
+ *
  */
 public class QuestionsDao {
     private List<Question> tutorsList;
@@ -122,7 +126,7 @@ public class QuestionsDao {
         return questions;
     }
 
-    // returns list with size equals to number of questions in test
+    // returns list with size equals to number of questions in test (such parameter is assigned in config file)
     public List<Question> getQuestionsByTopic(String topic) throws SQLException {
         List<Question> tmp = new ArrayList<>();
 
@@ -192,13 +196,14 @@ public class QuestionsDao {
         return tmp;
     }
 
+    //main method for testing
     public static void main(String[] args) {
         QuestionsDao qd = new QuestionsDao();
         Question q = new Question();
 
         q.setqText("Тестовый вопрос");
         q.setqCorrectAnswer("Бывает как обычно");
-        q.setqAnswer2("mi-mi-mi");
+        q.setqAnswer2("by the way");
         q.setqAnswer3("нет ничего");
         q.setqAnswer4("Show must go on");
         q.setqAnswer5(null);

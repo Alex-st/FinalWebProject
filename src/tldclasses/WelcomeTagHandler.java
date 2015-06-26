@@ -6,6 +6,8 @@ import javax.servlet.jsp.tagext.TagSupport;
 import java.io.IOException;
 
 /**
+ * <h1>WelcomeTagHandler</h1>
+ * Class is responsible new jstl tag "hello" with parameter but without body
  * Created by alex on 6/24/15.
  */
 public class WelcomeTagHandler extends TagSupport {
